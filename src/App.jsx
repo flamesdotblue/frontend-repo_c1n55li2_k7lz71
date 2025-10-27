@@ -6,30 +6,30 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-white text-zinc-950">
       <Navbar />
       <main>
         <Hero />
-        <section id="overview" className="py-12 sm:py-16">
+        <section id="overview" className="py-16 sm:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 {
-                  title: 'Structured Plan',
-                  desc: 'A week-by-week roadmap across OIR, PP&DT, Psych, GTO, and Interview rounds.',
+                  title: 'Clear Roadmap',
+                  desc: 'Week-by-week plan across OIR, PP&DT, Psych, GTO, and Interview.',
                 },
                 {
-                  title: 'Realistic Practice',
-                  desc: 'Timed drills and scenario-based tasks closely mirroring actual assessment.',
+                  title: 'Focused Practice',
+                  desc: 'Calm layouts with timers and clean solution keys.',
                 },
                 {
-                  title: 'Track Progress',
-                  desc: 'Keep an eye on performance trends and identify focus areas to improve.',
+                  title: 'Measured Progress',
+                  desc: 'Track trends, spot gaps, and refine with intent.',
                 },
               ].map((c) => (
-                <div key={c.title} className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
-                  <h3 className="text-base font-semibold">{c.title}</h3>
-                  <p className="mt-2 text-sm text-gray-600">{c.desc}</p>
+                <div key={c.title} className="rounded-2xl border border-zinc-200 bg-white p-6">
+                  <h3 className="text-base font-medium">{c.title}</h3>
+                  <p className="mt-2 text-sm text-zinc-600">{c.desc}</p>
                 </div>
               ))}
             </div>

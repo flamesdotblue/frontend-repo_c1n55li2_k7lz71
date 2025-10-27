@@ -6,17 +6,17 @@ export default function Navbar() {
 
   const navItems = [
     { label: 'Overview', href: '#overview' },
-    { label: 'Practice', href: '#practice' },
-    { label: 'Resources', href: '#resources' },
+    { label: 'Tracks', href: '#practice' },
+    { label: 'Library', href: '#resources' },
     { label: 'Contact', href: '#contact' },
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/70 backdrop-blur border-b border-gray-100">
+    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-zinc-200/60">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <a href="#" className="flex items-center gap-2 group">
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-sm group-hover:scale-105 transition-transform">
+          <a href="#" className="flex items-center gap-3">
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-black text-white">
               <Shield size={18} />
             </span>
             <span className="text-lg font-semibold tracking-tight">SSB Prep</span>
@@ -27,7 +27,7 @@ export default function Navbar() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                className="text-sm text-zinc-700 hover:text-black"
               >
                 {item.label}
               </a>
@@ -35,13 +35,13 @@ export default function Navbar() {
           </nav>
 
           <div className="hidden md:flex items-center gap-3">
-            <a href="#login" className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+            <a href="#login" className="inline-flex items-center gap-2 text-sm text-zinc-700 hover:text-black">
               <User size={16} />
               Login
             </a>
             <a
               href="#get-started"
-              className="inline-flex items-center rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              className="inline-flex items-center rounded-full bg-black px-4 py-2 text-sm font-medium text-white"
             >
               Get Started
             </a>
@@ -49,7 +49,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100"
+            className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-zinc-800"
             aria-label="Toggle menu"
           >
             {open ? <X size={20} /> : <Menu size={20} />}
@@ -58,24 +58,24 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-gray-100 bg-white">
+        <div className="md:hidden border-t border-zinc-200 bg-white">
           <div className="px-4 py-3 space-y-2">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="block rounded-md px-3 py-2 text-sm text-gray-700 hover:bg-gray-50"
+                className="block rounded-md px-3 py-2 text-sm text-zinc-800 hover:bg-zinc-50"
                 onClick={() => setOpen(false)}
               >
                 {item.label}
               </a>
             ))}
             <div className="flex gap-2 pt-2">
-              <a href="#login" className="flex-1 inline-flex items-center justify-center gap-2 rounded-md border border-gray-200 px-3 py-2 text-sm text-gray-700">
+              <a href="#login" className="flex-1 inline-flex items-center justify-center gap-2 rounded-md border border-zinc-200 px-3 py-2 text-sm text-zinc-800">
                 <User size={16} />
                 Login
               </a>
-              <a href="#get-started" className="flex-1 inline-flex items-center justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-medium text-white">
+              <a href="#get-started" className="flex-1 inline-flex items-center justify-center rounded-md bg-black px-3 py-2 text-sm font-medium text-white">
                 Get Started
               </a>
             </div>
